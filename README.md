@@ -17,7 +17,23 @@ Run the following code to create `mqpar.xml`:
 ./gen_mqpar.py <path/to/template> <path/to/raw_file_folder> -o <path/to/output_mqpar.xml> -t <num_threads>
 # for example,
 ./gen_mqpar.py templates/SILAC.xml raw_files/FP93 -o fp93_silac.xml -t 6
-
 ```
-If you're getting errors with starting MaxQuant with the generated `mqpar` files, then I would manually check all of the paths in the XML file first.
+> Personally I prefer creating the `parameter` file using the MaxQuant GUI because it is easier and faster.
+5. Set un your script with the job instructions as shown:
+```
+#!/bin/bash
+#SBATCH --account=cbio
+#SBATCH --partition=ada
+#SBATCH --nodes=1 --ntasks=40
+#SBATCH --time=170:00:00
+#SBATCH --job-name="maxquantrun"
+#SBATCH --mail-user=javanokendo@gmail.com
+#SBATCH --mail-type=END,FAIL
 
+# Load the mono module
+module load software/mono-6.8.0
+
+cd /scratch/oknjav001/MaxQuant-1.6
+
+mono /scratch/oknjav001/MaxQuant/bin/MaxQuantCmd.exe balddataparam.xml             
+```
