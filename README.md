@@ -18,7 +18,8 @@ Run the following code to create `mqpar.xml`:
 # for example,
 ./gen_mqpar.py templates/SILAC.xml raw_files/FP93 -o fp93_silac.xml -t 6
 ```
-> Personally I prefer creating the `parameter` file using the MaxQuant GUI because it is easier and faster.
+> Personally I prefer creating the parameter file using the MaxQuant GUI because it is easier and faster.
+
 5. Set un your script with the job instructions as shown:
 ```
 #!/bin/bash
@@ -37,3 +38,6 @@ cd /scratch/oknjav001/MaxQuant-1.6
 
 mono /scratch/oknjav001/MaxQuant/bin/MaxQuantCmd.exe balddataparam.xml             
 ```
+And to run this to your local machine, just do `mono /path/to/bin/MaxQuantCmd.exe balddateparam.xml`
+
+Do not hesitate to [contact](javanokendo@gmail.com) me if you need further clarification.
