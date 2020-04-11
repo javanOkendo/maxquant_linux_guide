@@ -1,7 +1,6 @@
 Guide on how to Run MaxQuant at the University of Cape Town High Performance Computing (HPC) cluster 
 ====================================================================================================
-
-Read my blog post here: [http://atchen.me/research/2019/03/21/mq-linux.html](http://atchen.me/research/2019/03/21/mq-linux.html)
+This workflow was adapted from [Albert Chen blog](http://atchen.me/research/2019/03/21/mq-linux.html) and we have modify it to run the MaxQuant sequence database searches for our TB Mass spectrometry data.
 
 The goal of the `gen_mqpar.py` script is to create MaxQuant configuration files (`mqpar.xml` files) in a console environment without having to transfer one over or edit the XML manually. The example given has some hard-coded stuff and makes assumptions about your filesystem, so please follow the steps below to get started.
 
