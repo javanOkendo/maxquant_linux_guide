@@ -1,5 +1,5 @@
-Guide oh how to Run MaxQuant on University of Cape Town High Performance Computing (HPC) cluster 
-================================================================================================
+Guide on how to Run MaxQuant at the University of Cape Town High Performance Computing (HPC) cluster 
+====================================================================================================
 
 Read my blog post here: [http://atchen.me/research/2019/03/21/mq-linux.html](http://atchen.me/research/2019/03/21/mq-linux.html)
 
